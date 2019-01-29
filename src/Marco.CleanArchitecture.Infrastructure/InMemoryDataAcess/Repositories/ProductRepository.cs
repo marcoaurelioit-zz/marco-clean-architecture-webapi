@@ -15,26 +15,26 @@ namespace Marco.CleanArchitecture.Infrastructure.InMemoryDataAcess.Repositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task Add(Product product)
+        public async Task AddAsync(Product product)
         {
             _context.Products.Add(product);
             await Task.CompletedTask;
         }
 
-        public async Task Delete(Product product)
+        public async Task DeleteAsync(Product product)
         {
             Product productOld = _context.Products.SingleOrDefault(x=> x.Id == product.Id);
             _context.Products.Remove(productOld);
             await Task.CompletedTask;
         }
 
-        public async Task<Product> Get(Guid id)
+        public async Task<Product> GetAsync(Guid id)
         {
             Product product = _context.Products.SingleOrDefault(x => x.Id == id);
             return await Task.FromResult(product);
         }
 
-        public async Task Update(Product product)
+        public async Task UpdateAsync(Product product)
         {
             Product productOld = _context.Products.SingleOrDefault(x=> x.Id == product.Id);
             productOld = product;

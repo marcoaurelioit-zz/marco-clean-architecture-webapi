@@ -6,6 +6,6 @@ namespace Marco.CleanArchitecture.Application.Repositories
 {
     public interface IProductReadOnlyRepository
     {
-        Task<Product> Get(Guid id);
+        Task<Product> GetAsync(Guid id);
     }
 }

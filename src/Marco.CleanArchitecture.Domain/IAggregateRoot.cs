@@ -1,6 +1,4 @@
 ﻿namespace Marco.CleanArchitecture.Domain
 {
-    internal interface IAggregateRoot
-    {
-    }
+    internal interface IAggregateRoot : IEntity { }   
 }
