@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Marco.CleanArchitecture.WebApi
 {
@@ -19,11 +20,13 @@ namespace Marco.CleanArchitecture.WebApi
         {
         }
 
+        [ExcludeFromCodeCoverage]
         protected override void AddCustomApiServices(IServiceCollection services)
         {
             services.AddInMemoryDataAcess();
         }
 
+        [ExcludeFromCodeCoverage]
         protected override void AddCustomMiddlewaresInPipeline(IApplicationBuilder app)
         {
         }
