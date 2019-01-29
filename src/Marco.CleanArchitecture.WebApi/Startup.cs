@@ -20,7 +20,8 @@ namespace Marco.CleanArchitecture.WebApi
         }
 
         protected override void AddCustomApiServices(IServiceCollection services)
-        {            
+        {
+            services.AddInMemoryDataAcess();
         }
 
         protected override void AddCustomMiddlewaresInPipeline(IApplicationBuilder app)
