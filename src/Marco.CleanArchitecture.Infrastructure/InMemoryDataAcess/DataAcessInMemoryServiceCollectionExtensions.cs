@@ -5,14 +5,14 @@ using System;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public static class InMemoryDataAcessServiceCollectionExtensions
+    public static class DataAcessInMemoryServiceCollectionExtensions
     {
-        public static IServiceCollection AddInMemoryDataAcess(this IServiceCollection services)
+        public static IServiceCollection AddDataAcessInMemory(this IServiceCollection services)
         {
             if (services is null)
                 throw new ArgumentNullException(nameof(services));
 
-            services.AddSingleton<InMemoryContext>();
+            services.AddSingleton<DataAcessInMemoryContext>();
             services.AddScoped<IProductReadOnlyRepository, ProductRepository>();
             services.AddScoped<IProductWriteOnlyRepository, ProductRepository>();
 

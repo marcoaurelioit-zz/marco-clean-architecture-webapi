@@ -23,6 +23,8 @@ namespace Marco.CleanArchitecture.WebApi.UseCases.GetProductDetails
         /// <summary>
         /// Get product details
         /// </summary>
+        /// <param name="productId"></param>
+        /// <returns></returns>
         [HttpGet("{productId}", Name = "GetProduct")]
         public async Task<IActionResult> Get(Guid productId)
         {

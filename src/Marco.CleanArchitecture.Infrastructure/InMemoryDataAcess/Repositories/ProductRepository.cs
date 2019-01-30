@@ -8,9 +8,9 @@ namespace Marco.CleanArchitecture.Infrastructure.InMemoryDataAcess.Repositories
 {
     public class ProductRepository : IProductReadOnlyRepository, IProductWriteOnlyRepository
     {
-        private readonly InMemoryContext _context;
+        private readonly DataAcessInMemoryContext _context;
 
-        public ProductRepository(InMemoryContext context)
+        public ProductRepository(DataAcessInMemoryContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }

@@ -25,7 +25,10 @@ namespace Marco.CleanArchitecture.WebApi
         [ExcludeFromCodeCoverage]
         protected override void AddCustomApiServices(IServiceCollection services)
         {
-            services.AddInMemoryDataAcess();
+            #region [+] Data Acess
+            //services.AddDataAcessInMemory();
+            services.AddDataAcessEntityFramework(Configuration); 
+            #endregion
 
             #region [+] Use Cases
             services.AddScoped<ProductDetailsPresenter>();

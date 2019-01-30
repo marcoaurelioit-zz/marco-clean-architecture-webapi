@@ -3,11 +3,11 @@ using System.Collections.ObjectModel;
 
 namespace Marco.CleanArchitecture.Infrastructure.InMemoryDataAcess
 {
-    public sealed class InMemoryContext
+    public sealed class DataAcessInMemoryContext
     {
         public Collection<Product> Products { get; set; }
 
-        public InMemoryContext()
+        public DataAcessInMemoryContext()
         {
             Products = new Collection<Product>();
         }

@@ -8,6 +8,8 @@
             <summary>
             Get product details
             </summary>
+            <param name="productId"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>
