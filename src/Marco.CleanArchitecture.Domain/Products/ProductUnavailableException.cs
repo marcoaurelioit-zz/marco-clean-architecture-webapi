@@ -1,10 +1,11 @@
-﻿using Marco.Exceptions.Core;
-
-namespace Marco.CleanArchitecture.Domain.Products
+﻿namespace Marco.CleanArchitecture.Domain.Products
 {
-    public class ProductUnavailableException : CoreException
+    public class ProductUnavailableException : DomainException
     {
-        public override string Key => "ProductUnavailableException";
-        public override string Message => "Product unavailable.";
+        internal ProductUnavailableException(string message)
+            :base(message)
+        {
+
+        }
     }
 }
