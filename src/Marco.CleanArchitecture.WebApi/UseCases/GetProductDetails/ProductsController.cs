@@ -16,8 +16,8 @@ namespace Marco.CleanArchitecture.WebApi.UseCases.GetProductDetails
 
         public ProductsController(IGetProductDetailsUseCase getProductDetailsUseCase, ProductDetailsPresenter presenter)
         {
-            _getProductDetailsUseCase = getProductDetailsUseCase;
-            _presenter = presenter;
+            _getProductDetailsUseCase = getProductDetailsUseCase ?? throw new ArgumentNullException(nameof(getProductDetailsUseCase));
+            _presenter = presenter ?? throw new ArgumentNullException(nameof(presenter));
         }
 
         /// <summary>
