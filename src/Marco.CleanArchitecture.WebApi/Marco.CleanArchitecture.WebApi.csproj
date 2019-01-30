@@ -5,15 +5,12 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>C:\git-marco\marco-clean-architecture-webapi\src\Marco.CleanArchitecture.WebApi\Marco.CleanArchitecture.WebApi.xml</DocumentationFile>
     <NoWarn>1701;1702;1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Marco.Logger" Version="1.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.All" />
-    <PackageReference Include="Scrutor" Version="3.0.2" />   
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Marco.AspNetCore.WebApi.BootStrapper" Version="1.0.0" />
   </ItemGroup>
 
   <ItemGroup>

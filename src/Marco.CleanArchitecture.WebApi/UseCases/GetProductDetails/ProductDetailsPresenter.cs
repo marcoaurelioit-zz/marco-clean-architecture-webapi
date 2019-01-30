@@ -11,10 +11,10 @@ namespace Marco.CleanArchitecture.WebApi.UseCases.GetProductDetails
         {
             if (output == null)
             {
-                ViewModel = new NoContentResult();
+                ViewModel = new NotFoundResult();
                 return;
             }
-            
+
             ViewModel = new ObjectResult(new ProductDetailsModel(
                 output.ProductId,
                 output.Name,

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Marco.CleanArchitecture.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Marco.CleanArchitecture.WebApi.UseCases.GetProductDetails.ProductsController.Get(System.Guid)">
+            <summary>
+            Get product details
+            </summary>
+        </member>
+    </members>
+</doc>

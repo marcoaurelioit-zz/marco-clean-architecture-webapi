@@ -16,12 +16,12 @@ namespace Marco.CleanArchitecture.Application.UseCases.GetProductDetails
 
         public async Task<ProductOutput> Execute(Guid productId)
         {
+            ProductOutput output = null;
+
             Product product = await _productReadOnlyRepository.GetAsync(productId);
 
-            if (product is null)
-                throw new ProductNotFoundException($"The product {productId} does not exists or is not processed yet.");
-
-            ProductOutput output = new ProductOutput(product);
+            if (product != null)
+                output = new ProductOutput(product);
 
             return output;
         }

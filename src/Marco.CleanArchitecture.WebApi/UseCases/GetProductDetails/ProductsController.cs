@@ -1,12 +1,15 @@
-﻿using Marco.CleanArchitecture.Application.UseCases.GetProductDetails;
+﻿using Marco.AspNetCore.WebApi.BootStrapper;
+using Marco.CleanArchitecture.Application.UseCases.GetProductDetails;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
 namespace Marco.CleanArchitecture.WebApi.UseCases.GetProductDetails
 {
-    [Route("api/[controller]")]
-    public class ProductsController : Controller
+    [AllowAnonymous]
+    [ApiVersion("1.0")]
+    public class ProductsController : ApiBaseController
     {
         private readonly IGetProductDetailsUseCase _getProductDetailsUseCase;
         private readonly ProductDetailsPresenter _presenter;
