@@ -47,16 +47,14 @@ namespace Marco.CleanArchitecture.Infrastructure.EntityFrameworkDataAccess.Repos
 
         public async Task UpdateAsync(Product product)
         {
-            Entities.Product productEntity = new Entities.Product()
-            {
-                Id = product.Id,
-                Name = product.Name,
-                Description = product.Description,
-                Price = product.Price,
-                Available = product.Available
-            };
+            Entities.Product productOld = await _context.Products.FindAsync(product.Id);
 
-            _context.Entry(productEntity).State = EntityState.Modified;
+            productOld.Name = product.Name;
+            productOld.Description = product.Description;
+            productOld.Price = product.Price;
+            productOld.Available = product.Available;
+
+            _context.Entry(productOld).State = EntityState.Modified;
 
             await _context.SaveChangesAsync();
         }
